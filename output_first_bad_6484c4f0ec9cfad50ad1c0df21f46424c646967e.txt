@@ -1,0 +1,2 @@
+-------------BEST SCORE: nan
+-------------BEST PARAMS: {'max_depth': -10, 'n_estimators': 9}

@@ -1,0 +1,92 @@
+/project/scikit-learn/sklearn/model_selection/_validation.py:379: FitFailedWarning: 
+5 fits failed out of a total of 15.
+The score on these train-test partitions for these parameters will be set to nan.
+If these failures are not expected, you can try to debug them by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/project/scikit-learn/sklearn/model_selection/_validation.py", line 687, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/project/scikit-learn/sklearn/ensemble/_forest.py", line 471, in fit
+    trees = Parallel(
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 1041, in __call__
+    if self.dispatch_one_batch(iterator):
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 859, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 777, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/usr/local/lib/python3.9/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/usr/local/lib/python3.9/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 262, in __call__
+    return [func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 262, in <listcomp>
+    return [func(*args, **kwargs)
+  File "/project/scikit-learn/sklearn/utils/fixes.py", line 216, in __call__
+    return self.function(*args, **kwargs)
+  File "/project/scikit-learn/sklearn/ensemble/_forest.py", line 185, in _parallel_build_trees
+    tree.fit(X, y, sample_weight=curr_sample_weight, check_input=False)
+  File "/project/scikit-learn/sklearn/tree/_classes.py", line 917, in fit
+    super().fit(
+  File "/project/scikit-learn/sklearn/tree/_classes.py", line 304, in fit
+    raise ValueError("max_depth must be greater than zero. ")
+ValueError: max_depth must be greater than zero. 
+
+  warnings.warn(some_fits_failed_message, FitFailedWarning)
+/project/scikit-learn/sklearn/model_selection/_search.py:969: UserWarning: One or more of the test scores are non-finite: [       nan 0.95333333 0.94666667]
+  warnings.warn(
+/project/scikit-learn/sklearn/model_selection/_search.py:969: UserWarning: One or more of the train scores are non-finite: [  nan 0.965 0.99 ]
+  warnings.warn(
+Traceback (most recent call last):
+  File "/project/scriptTest.py", line 20, in <module>
+    search.fit(X, y)
+  File "/project/scikit-learn/sklearn/model_selection/_search_successive_halving.py", line 262, in fit
+    super().fit(X, y=y, groups=groups, **fit_params)
+  File "/project/scikit-learn/sklearn/model_selection/_search.py", line 891, in fit
+    self._run_search(evaluate_candidates)
+  File "/project/scikit-learn/sklearn/model_selection/_search_successive_halving.py", line 367, in _run_search
+    results = evaluate_candidates(
+  File "/project/scikit-learn/sklearn/model_selection/_search.py", line 868, in evaluate_candidates
+    _warn_or_raise_about_fit_failures(out, self.error_score)
+  File "/project/scikit-learn/sklearn/model_selection/_validation.py", line 368, in _warn_or_raise_about_fit_failures
+    raise ValueError(all_fits_failed_message)
+ValueError: 
+All the 5 fits failed.
+It is is very likely that your model is misconfigured.
+You can try to debug the error by setting error_score='raise'.
+
+Below are more details about the failures:
+--------------------------------------------------------------------------------
+5 fits failed with the following error:
+Traceback (most recent call last):
+  File "/project/scikit-learn/sklearn/model_selection/_validation.py", line 687, in _fit_and_score
+    estimator.fit(X_train, y_train, **fit_params)
+  File "/project/scikit-learn/sklearn/ensemble/_forest.py", line 471, in fit
+    trees = Parallel(
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 1041, in __call__
+    if self.dispatch_one_batch(iterator):
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 859, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 777, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/usr/local/lib/python3.9/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/usr/local/lib/python3.9/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 262, in __call__
+    return [func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/joblib/parallel.py", line 262, in <listcomp>
+    return [func(*args, **kwargs)
+  File "/project/scikit-learn/sklearn/utils/fixes.py", line 216, in __call__
+    return self.function(*args, **kwargs)
+  File "/project/scikit-learn/sklearn/ensemble/_forest.py", line 185, in _parallel_build_trees
+    tree.fit(X, y, sample_weight=curr_sample_weight, check_input=False)
+  File "/project/scikit-learn/sklearn/tree/_classes.py", line 917, in fit
+    super().fit(
+  File "/project/scikit-learn/sklearn/tree/_classes.py", line 304, in fit
+    raise ValueError("max_depth must be greater than zero. ")
+ValueError: max_depth must be greater than zero. 
+
